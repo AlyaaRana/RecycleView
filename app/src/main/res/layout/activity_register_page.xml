@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:text="Already a member ?"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txt_signup"
+            android:textColor="@color/purple_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:text="Sign in"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in to alyaapunyaaa"
+        android:textSize="27dp"
+        android:layout_marginLeft="25dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:text="Or"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txt_name"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:hint="name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/txt_usn"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:hint="Username"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/txt_email"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:hint="Email"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/txt_pw"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/yellow"
+        android:text="Create a account"
+        android:textColor="@color/black" />
+
+</LinearLayout>
