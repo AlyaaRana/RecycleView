@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -37,6 +38,7 @@ public class LoginPage extends AppCompatActivity {
     EditText txtUsername, txtPassword;
     Button btnLogin;
     ProgressBar pbLadingBar;
+    TextView txt_signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,16 @@ public class LoginPage extends AppCompatActivity {
         txtPassword = (EditText) findViewById(R.id.txt_password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         pbLadingBar = findViewById(R.id.pbloadingbar);
+        txt_signup = (TextView) findViewById(R.id.txt_signup);
+
+        txt_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginPage.this, RegisterPage.class);
+                startActivity(intent);
+            }
+        });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
