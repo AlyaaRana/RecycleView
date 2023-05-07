@@ -48,7 +48,7 @@ public class LoginPage extends AppCompatActivity {
         txtUsername = (EditText) findViewById(R.id.txt_username);
         txtPassword = (EditText) findViewById(R.id.txt_password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-        pbLadingBar = findViewById(R.id.pbloadingbar);
+//        pbLadingBar = findViewById(R.id.pbloadingbar);
         txt_signup = (TextView) findViewById(R.id.txt_signup);
 
         txt_signup.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +64,7 @@ public class LoginPage extends AppCompatActivity {
             public void onClick(View view) {
                 String username = txtUsername.getText().toString();
                 String password = txtPassword.getText().toString();
-                pbLadingBar.setVisibility(View.VISIBLE);
+//                pbLadingBar.setVisibility(View.VISIBLE);
                 btnLogin.setEnabled(false);
 
                 // hit api login
@@ -92,7 +92,7 @@ public class LoginPage extends AppCompatActivity {
                                         editor.putString(EMAIL_KEY, username.toString());
                                         editor.putString(PASSWORD_KEY, "");
 
-                                        pbLadingBar.setVisibility(View.GONE);
+//                                        pbLadingBar.setVisibility(View.GONE);
                                         btnLogin.setEnabled(true);
                                         Intent intent = new Intent(LoginPage.this, MainActivity.class);
                                         startActivity(intent);
