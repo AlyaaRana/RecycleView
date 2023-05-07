@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/clr2"
     tools:context=".RegisterPage">
 
     <LinearLayout
@@ -79,7 +80,7 @@
 
         <EditText
             android:id="@+id/txt_name"
-            android:layout_width="160dp"
+            android:layout_width="140dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:hint="name"
@@ -87,7 +88,7 @@
 
         <EditText
             android:id="@+id/txt_usn"
-            android:layout_width="160dp"
+            android:layout_width="140dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
             android:hint="Username"
@@ -109,7 +110,7 @@
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/btnSignup"
@@ -119,5 +120,19 @@
         android:backgroundTint="@color/yellow"
         android:text="Create a account"
         android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+
 
 </LinearLayout>
