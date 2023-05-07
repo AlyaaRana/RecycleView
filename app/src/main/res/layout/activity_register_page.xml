@@ -121,18 +121,18 @@
         android:text="Create a account"
         android:textColor="@color/black" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-        <ProgressBar
-            android:id="@+id/pbLoading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:visibility="gone"/>
-    </LinearLayout>
+<!--        <ProgressBar-->
+<!--            android:id="@+id/pbLoading"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:visibility="gone"/>-->
+<!--    </LinearLayout>-->
 
 
 </LinearLayout>
