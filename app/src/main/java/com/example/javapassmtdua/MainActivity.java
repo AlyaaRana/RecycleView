@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
 
     RecyclerView rv_listext;
     ArrayList<EPLListFood> ListDataEPLFood;
+
+    private ImageView ivDelete;
     private DataAdapter adapterData;
 
     public void getEPLOnline(){
@@ -76,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
                     }
                     });
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
