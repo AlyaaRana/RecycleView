@@ -20,7 +20,7 @@ public class DataAdapter extends RecyclerView.Adapter <DataAdapter.MyViewHolder>
     private List<EPLListFood> EPLlistFood;
     private DataAdapterListener listener;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder  {
         public TextView tv_number, tv_nameFood;
         public ImageView ivlogo_food;
 
@@ -51,7 +51,18 @@ public class DataAdapter extends RecyclerView.Adapter <DataAdapter.MyViewHolder>
     public DataAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_layout, parent, false);
-        return new MyViewHolder(view);
+        MyViewHolder viewHolder = new MyViewHolder(view);
+
+        // Tambahkan OnLongClickListener di sini
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                listener.onDataLongClicked(EPLlistFood.get(viewHolder.getAdapterPosition()));
+                return true;
+            }
+        });
+
+        return viewHolder;
     }
 
     @Override
@@ -70,6 +81,8 @@ public class DataAdapter extends RecyclerView.Adapter <DataAdapter.MyViewHolder>
 
     public interface DataAdapterListener {
         void onDataSelected(EPLListFood movie);
+
+        void onDataLongClicked(EPLListFood eplListFood);
     }
 
 

@@ -1,9 +1,11 @@
 package com.example.javapassmtdua;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -99,4 +101,41 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
         startActivity(intent);
         //finish();
     }
+
+    @Override
+    public void onDataLongClicked(EPLListFood myFood) {
+        // Tampilkan opsi menu delete di sini
+        showDeleteMenu(myFood);
+    }
+
+    private void showDeleteMenu(EPLListFood myFood) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Delete Item");
+        builder.setMessage("Are you sure you want to delete this item?");
+
+        builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // Lakukan operasi penghapusan item di sini
+                deleteItem(myFood);
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void deleteItem(EPLListFood myFood) {
+        // Lakukan operasi penghapusan item sesuai dengan data yang diberikan
+        ListDataEPLFood.remove(myFood);
+        adapterData.notifyDataSetChanged();
+    }
+
 }
