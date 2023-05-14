@@ -23,7 +23,20 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+
 public class LoginPage extends AppCompatActivity {
+
+    private static final int RC_SIGN_IN = 123;
+    private GoogleSignInClient mGoogleSignInClient;
+
+    private SignInButton btnSignIn;
 
     public static final String SHARED_PREFS = "shared_prefs";
 
@@ -44,6 +57,9 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
+        btnSignIn = findViewById(R.id.btn_sign_in);
+
         // konekkan semua komponen dengan xml nya
         txtUsername = (EditText) findViewById(R.id.txt_username);
         txtPassword = (EditText) findViewById(R.id.txt_password);
@@ -111,7 +127,10 @@ public class LoginPage extends AppCompatActivity {
                                 // Handle error
                             }
                         });
+
             }
         });
     }
+
+
 }
