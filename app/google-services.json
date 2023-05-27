@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "242652632777",
+    "project_id": "javapassmtdua",
+    "storage_bucket": "javapassmtdua.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242652632777:android:8a7b35449a63a832889f18",
+        "android_client_info": {
+          "package_name": "com.example.javapassmtdua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242652632777-spfg90h078tjtkish1afobj3bql0j0n3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuUMYsd8Gm0v27TQnOwiJ9kGa8wsy_FDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242652632777-spfg90h078tjtkish1afobj3bql0j0n3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

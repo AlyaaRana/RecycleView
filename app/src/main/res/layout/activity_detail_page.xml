@@ -1,56 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:background="@color/clr2"
     tools:context=".DetailPage">
 
-
-    <TextView
-        android:layout_marginLeft="280dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Neaa's Cafe"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="40dp"/>
-
-    <ImageView
-        android:id="@+id/iv_imgMenu"
-        android:layout_gravity="center"
-        android:layout_width="221dp"
-        android:layout_height="221dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_nameMenu"
-            android:textSize="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="25dp"
-            android:gravity="center"
-            android:textColor="@color/black"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:text="It's Name Food" />
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:text="Nama Makanan" />
+
+        <ImageView
+            android:id="@+id/iv_imgMenu"
+            android:layout_width="361dp"
+            android:layout_height="221dp"
+            android:layout_gravity="center"
+            tools:srcCompat="@tools:sample/avatars" />
+
+<!--        <RatingBar-->
+<!--            android:id="@+id/ratingBar"-->
+<!--            android:backgroundTint="@color/yellow"-->
+<!--            android:layout_width="211dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:numStars="5"-->
+<!--            android:padding="16dp"-->
+<!--            android:rating="4.5"-->
+<!--            android:stepSize="0.5" />-->
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/star"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/star"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/star"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/star"/>
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_decs_Menu"
-            android:textSize="17dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:text="It's description" />
+            android:padding="16dp"
+            android:text="Deskripsi Makanan" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:text="Harga: $10.99" />
+
+        <Button
+            android:id="@+id/btn_addToCart"
+            android:background="@drawable/shape_rounded"
+            android:backgroundTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:text="+ Add to chart" />
+
     </LinearLayout>
-</LinearLayout>
+
+</ScrollView>

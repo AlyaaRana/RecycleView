@@ -38,7 +38,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign in to alyaapunyaaa"
+        android:text="Sign up to alyaapunyaaa"
         android:textSize="27dp"
         android:layout_marginLeft="25dp"
         android:textStyle="bold"

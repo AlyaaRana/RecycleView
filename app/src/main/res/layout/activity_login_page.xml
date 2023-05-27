@@ -15,23 +15,7 @@
         android:layout_marginTop="25dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="190dp"
-            android:text="Not a member ?"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
 
-        <TextView
-            android:id="@+id/txt_signup"
-            android:textColor="@color/purple_700"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:textStyle="bold"
-            android:text="Sign up now"
-            android:textSize="15dp"/>
 
 <!--        <Button-->
 <!--            android:id="@+id/btn_toSignIn"-->
@@ -50,36 +34,12 @@
         android:textSize="27dp"
         android:layout_marginLeft="25dp"
         android:textStyle="bold"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:textColor="@color/black"/>
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal">
-
-       <View
-           android:layout_width="170dp"
-           android:layout_height="1dp"
-           android:background="#CCCCCC"
-           android:layout_marginLeft="20dp"
-           android:layout_gravity="center"/>
-
-       <TextView
-           android:text="Or"
-           android:textSize="20dp"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_margin="5dp"/>
-
-       <View
-           android:layout_width="170dp"
-           android:layout_height="1dp"
-           android:background="#CCCCCC"
-           android:layout_gravity="center"/>
 
 
-   </LinearLayout>
+
 
 
 <!--    <LinearLayout-->
@@ -107,7 +67,8 @@
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:hint="Username"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/txt_password"
@@ -115,16 +76,78 @@
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:text="Not a member ?"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txt_signup"
+            android:textColor="@color/purple_700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Sign up now"
+            android:textSize="15dp"/>
+    </LinearLayout>
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="153dp"
+        android:layout_width="218dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
         android:backgroundTint="@color/yellow"
         android:text="Sign in"
         android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:text="Or"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:textColor="@color/black"/>
+
+        <View
+            android:layout_width="170dp"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_SignInGoogle"
+        android:layout_width="218dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"/>
+
+
 
 <!--    <LinearLayout-->
 <!--        android:layout_width="match_parent"-->
