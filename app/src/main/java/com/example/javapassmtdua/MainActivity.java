@@ -2,6 +2,7 @@ package com.example.javapassmtdua;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,10 +10,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -33,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
     private ImageView ivDelete;
     private DataAdapter adapterData;
 
+    private Toolbar toolbar;
+
+    //buat ambil data nya itu
+    // jadi, "categories" itu array nya and.. array nya tu yg di ulang2
     public void getEPLOnline(){
         RecyclerView rv = findViewById(R.id.rv_listext);
         ProgressBar pb = findViewById(R.id.pbloading_img);
@@ -83,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
     }
 
 
-
+    //ni bwat ambil data epl from the api online d atas
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,8 +99,45 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
         ListDataEPLFood = new ArrayList<>();
         getEPLOnline();
 
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+
     }
 
+    //file menu dari src itu di inflasi ke objek menu sebagai argumen
+    //and, true buat menggembalikan, kl ternayata si menu udh berhasil d buat
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_option, menu);
+        return true;
+    }
+
+    // nampilin logout dari menu kmrn
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            // Handle settings action
+            performLogout();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
+
+    }
+
+    //buat logout aj si, kan ntar dia balik lg ke login toh
+    private void performLogout() {
+        // Lakukan operasi logout di sini
+        // Contoh: Navigasi kembali ke halaman login
+        Intent intent = new Intent(MainActivity.this, LoginPage.class);
+        startActivity(intent);
+        finish();
+    }
+
+    //buat nyambungin ke detail page, pake label "myFood"
     @Override
     public void onDataSelected(EPLListFood myFood) {
         Toast.makeText(this, "selected name"+ myFood.getStrName(), Toast.LENGTH_SHORT).show();
@@ -102,12 +147,14 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.DataA
         //finish();
     }
 
+    //buat nge konfir di adapter, kalo ni item mw di hapus
     @Override
     public void onDataLongClicked(EPLListFood myFood) {
         // Tampilkan opsi menu delete di sini
         showDeleteMenu(myFood);
     }
 
+    //buat nge apus
     private void showDeleteMenu(EPLListFood myFood) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Delete Item");

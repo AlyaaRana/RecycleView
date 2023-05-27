@@ -53,7 +53,7 @@ public class RegisterPage extends AppCompatActivity {
 //        pbLoading = findViewById(R.id.pbLoading);
         btnSignup = (Button) findViewById(R.id.btnSignup);
 
-        btnSignup.setOnClickListener(new View.OnClickListener() {
+        txt_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterPage.this, LoginPage.class);

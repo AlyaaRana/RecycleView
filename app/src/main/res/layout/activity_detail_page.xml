@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:background="@color/clr2"
     tools:context=".DetailPage">
 
@@ -14,192 +13,88 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_marginLeft="280dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Neaa's Cafe"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="10dp"/>
-
-        <TextView
             android:id="@+id/tv_nameMenu"
-            android:textSize="27dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="7dp"
-            android:gravity="center"
-            android:textColor="@color/black"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:text="It's Name Food" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/star"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/star"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/star"/>
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/star"/>
-
-        </LinearLayout>
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:text="Nama Makanan" />
 
         <ImageView
             android:id="@+id/iv_imgMenu"
-            android:layout_gravity="center"
-            android:layout_width="221dp"
+            android:layout_width="361dp"
             android:layout_height="221dp"
+            android:layout_gravity="center"
             tools:srcCompat="@tools:sample/avatars" />
+
+<!--        <RatingBar-->
+<!--            android:id="@+id/ratingBar"-->
+<!--            android:backgroundTint="@color/yellow"-->
+<!--            android:layout_width="211dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:numStars="5"-->
+<!--            android:padding="16dp"-->
+<!--            android:rating="4.5"-->
+<!--            android:stepSize="0.5" />-->
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginBottom="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:layout_marginLeft="10dp"
-                android:textStyle="bold"
-                android:textSize="19dp"
-                android:text="Description"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/star"/>
 
-            <LinearLayout
-                android:layout_width="90dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="175dp"
-                android:background="@drawable/shape_rounded"
-                android:backgroundTint="@color/black">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/star"/>
 
-                <TextView
-                    android:id="@+id/tv_min"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:textSize="23dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:text="-"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/star"/>
 
-                <TextView
-                    android:id="@+id/tv_plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:text="2"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/star"/>
 
-                <TextView
-                    android:id="@+id/tv_anumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="23dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:text="+"/>
-
-            </LinearLayout>
         </LinearLayout>
 
         <TextView
             android:id="@+id/tv_decs_Menu"
-            android:textSize="17dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textColor="@color/quartz"
-            android:textStyle="bold"
-            android:text="It's description" />
+            android:padding="16dp"
+            android:text="Deskripsi Makanan" />
 
-        <LinearLayout
-            android:layout_gravity="center"
-            android:layout_width="350dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:text="Harga: $10.99" />
+
+        <Button
+            android:id="@+id/btn_addToCart"
             android:background="@drawable/shape_rounded"
             android:backgroundTint="@color/black"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginLeft="35dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="15dp"
-                    android:text="Price"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="20dp"
-                    android:text="$18.9"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginLeft="148dp"
-                android:background="@drawable/shape_rounded"
-                android:backgroundTint="@color/purple">
-
-                <TextView
-                    android:id="@+id/tv_addChart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="7dp"
-                    android:textSize="17dp"
-                    android:layout_marginTop="10dp"
-                    android:text="+ Add to chart"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="16dp"
+            android:text="+ Add to chart" />
 
     </LinearLayout>
-
-
 
 </ScrollView>

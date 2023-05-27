@@ -5,7 +5,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00000000"
+        android:elevation="4dp"
+        app:titleTextColor="@color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:text="Neaa's Cafe (^^)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+
+<!--    <androidx.appcompat.widget.ActionMenuView-->
+<!--        android:layout_marginLeft="250dp"-->
+<!--        android:id="@+id/action_menu"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end"-->
+<!--        app:menu="@menu/menu_option" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_listext"
